@@ -36,6 +36,7 @@ int main(void) {
 	if (!(window = glfwCreateWindow(640, 480, "OpenGL / GLFW", mon, NULL))) { glfwTerminate(); return -1; }
 
 	glfwMakeContextCurrent(window);
+	glfwSetKeyCallback(window, key_callback);
 	
 	float x, y, z;
 	x = -0.5;
