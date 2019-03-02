@@ -1,4 +1,4 @@
-/* OpenGL (GLFW) Example03
+/* OpenGL (GLFW) Example01
  *
  * Moving objects
  *
@@ -27,11 +27,6 @@ int main(void) {
 	GLFWmonitor *mon;
 	mon = NULL; // glfwGetPrimaryMonitor();
 	if (!(window = glfwCreateWindow(640, 480, "OpenGL / GLFW", mon, NULL))) { glfwTerminate(); return -1; }
-
-	glfwMakeContextCurrent(window);
-	glfwSetKeyCallback(window, key_callback);
-	glfwSetWindowSizeLimits(window, 640, 480, GLFW_DONT_CARE, GLFW_DONT_CARE);
-	glfwSetWindowPos(window, 150, 150); // GLFW_DONT_CARE
 
 	float x, y, z;
 	x = -0.5;
