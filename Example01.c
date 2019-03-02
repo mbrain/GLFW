@@ -13,11 +13,6 @@
 #include <GLFW/glfw3.h>
 #include <math.h>
 
-static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods) {
-	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-		glfwSetWindowShouldClose(window, GL_TRUE);
-}
-
 int main(void) {
 
 	GLFWwindow* window;
@@ -27,11 +22,6 @@ int main(void) {
 	GLFWmonitor *mon;
 	mon = NULL; // glfwGetPrimaryMonitor();
 	if (!(window = glfwCreateWindow(640, 480, "OpenGL / GLFW", mon, NULL))) { glfwTerminate(); return -1; }
-
-	glfwMakeContextCurrent(window);
-	glfwSetKeyCallback(window, key_callback);
-	glfwSetWindowSizeLimits(window, 640, 480, GLFW_DONT_CARE, GLFW_DONT_CARE);
-	glfwSetWindowPos(window, 150, 150); // GLFW_DONT_CARE
 
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window)) {
