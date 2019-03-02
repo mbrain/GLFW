@@ -1,4 +1,4 @@
-/* OpenGL (GLFW) Example
+/* OpenGL (GLFW) Example02
  *
  * Drawing primitives
  *
