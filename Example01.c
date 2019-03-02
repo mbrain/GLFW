@@ -35,6 +35,8 @@ int main(void) {
 	mon = NULL; // glfwGetPrimaryMonitor();
 	if (!(window = glfwCreateWindow(640, 480, "OpenGL / GLFW", mon, NULL))) { glfwTerminate(); return -1; }
 
+	glfwMakeContextCurrent(window);
+	
 	float x, y, z;
 	x = -0.5;
 	y = 0.5;
